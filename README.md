@@ -8,8 +8,17 @@ When running the pet-store, the following environment variables are expected:
 - `DB_PLATFORM` Platform to use in the DDL or DML scripts (such as schema-${platform}.sql
   or data-${platform}.sql). Supported values of `DB_PLATFORM` are `mysql`, `mssql`, and `postgres`.
 
+The connection string to connect the webapp to the postgresql database is:
+
+```
+postgresql://${POSTGRESQL_SERVICE_NAME}.${APPLICATION_NAMESPACE}.svc.cluster.local:5432/postgres
+```
+
+
 ### Routes
-The demo application mocks a pet store service which controls an inventory of pets in a persistent database. The following routes are exposed:
+The demo application mocks a pet store service which controls an inventory of pets in a persistent database.  
+The demo applications is exposed on port `8080`.  
+The following routes are exposed:
 
 ---
 `GET` `/pets`  
